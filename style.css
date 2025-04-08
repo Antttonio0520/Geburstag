@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Roboto', sans-serif;
+   background: linear-gradient(90deg, rgb(230, 246, 14) 0%, rgba(0,255,56,1) 100%);
+   background-size: 400% 400%;
+   animation: gradientBG 7s ease infinite;
+ }
+ 
+ @keyframes gradientBG {
+   0% {background-position: 0% 50%;}
+   50% {background-position: 100% 50%;}
+   100% {background-position: 0% 50%;}
+ }
+
+
+a {
+   text-decoration: none;
+}
+ul {
+   font-size: 24px;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+
+
+
+ 
+.box-list{
+   padding-top: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.box-list p {
+   text-align: center;
+}
+.list-item {
+   margin-bottom: 20px;
+   opacity: 0;
+   transform: translateY(50px);
+   animation: slideIn 0.5s ease-out forwards;
+}
+
+.list-item a {
+   display: inline-block;
+   color: black;
+   border-radius: 10px;
+   padding: 15px;
+   background: rgb(59,110,250);
+   background: linear-gradient(0deg, rgba(59,110,250,1) 0%, rgba(196,71,251,1) 100%);
+   transition: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-item a:hover {
+   color: #ecf0e1;
+   transform: scale(1.2);
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+.list-item:nth-child(2) {
+   animation-delay: 0.2s;
+}
+.list-item:nth-child(3) {
+   animation-delay: 0.4s;
+}
+.list-item:nth-child(4) {
+   animation-delay: 0.6s;
+}
+.list-item:nth-child(5) {
+   animation-delay: 0.8s;
+}
+.list-item:nth-child(6) {
+   animation-delay: 1s;
+}
+.list-item:nth-child(7) {
+   animation-delay: 1.2s;
+}
+
+@keyframes slideIn {
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+
+
+
+
+.overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .hidden {
+   display: none;
+ }
+ 
+ .form-popup {
+   background: white;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
+ 
